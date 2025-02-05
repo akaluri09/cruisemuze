@@ -3,19 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlog - CruiseMuze</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Roadczar Zone - The Art of Speed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background: #1a1a1a; color: white; text-align: center; }
-        h1 { font-size: 2.5em; margin-top: 50px; }
-        .video-container { margin-top: 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+        }
+        body {
+            background: #000;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: slideShow 20s infinite;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 4em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: transform 0.2s ease;
+        }
+        nav a:hover {
+            transform: scale(1.2);
+        }
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: url('https://source.unsplash.com/100x100/?robot,ai') no-repeat center/cover;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+        .chatbot:hover {
+            transform: scale(1.1);
+        }
+        @keyframes slideShow {
+            0%, 100% { background-image: url('https://source.unsplash.com/3840x2160/?motorcycle,speed'); }
+            25% { background-image: url('https://source.unsplash.com/3840x2160/?bike,road'); }
+            50% { background-image: url('https://source.unsplash.com/3840x2160/?racing,adventure'); }
+            75% { background-image: url('https://source.unsplash.com/3840x2160/?speed,action'); }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Vlog</h1>
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hero">
+        <div class="hero-slideshow"></div>
+        <div class="hero-content">
+            <h1>Welcome to Roadczar Zone</h1>
+            <p>Fuel your soul with speed, ink, and unchained power.</p>
+        </div>
     </div>
-    <a href="index.html" style="color: white;">← Back to Home</a>
+    <div class="chatbot" onclick="openChat()"></div>
+    <script>
+        function openChat() {
+            alert('Chatbot feature coming soon! Stay tuned.');
+        }
+    </script>
 </body>
 </html>
