@@ -55,58 +55,37 @@
             display: block;
             margin-top: 10px;
         }
-        .btn {
+        .contact-form {
             margin-top: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00ffcc;
+            width: 60%;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        .contact-form button {
+            margin-top: 15px;
             padding: 14px 28px;
             font-size: 1.4em;
             background: #ff0000;
             color: white;
             border-radius: 8px;
             text-decoration: none;
+            border: none;
+            cursor: pointer;
             transition: transform 0.3s ease, background 0.3s ease;
         }
-        .btn:hover {
+        .contact-form button:hover {
             transform: scale(1.1);
             background: #cc0000;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.9);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            transition: opacity 0.5s ease-in-out;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: transform 0.2s ease;
-        }
-        nav a:hover {
-            transform: scale(1.2);
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
         }
     </style>
 </head>
@@ -125,6 +104,17 @@
             <a href="https://instagram.com/cruisemuze" target="_blank">Instagram: @cruisemuze</a>
             <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube: @cruisemuze</a>
             <a href="mailto:contact@roadczar.com">Email: contact@roadczar.com</a>
+            <p>Text me at: <strong>669-777-6221</strong></p>
+        </div>
+        <div class="contact-form">
+            <h2>Send me a message</h2>
+            <form action="send-message.php" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Your Name (Optional)">
+                <input type="email" name="email" placeholder="Your Email (Optional)">
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="file" name="attachment">
+                <button type="submit">Send Message</button>
+            </form>
         </div>
         <a href="index.html" class="btn">Back to Home</a>
     </div>
