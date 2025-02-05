@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roadczar Zone - The Art of Speed</title>
+    <title>Roadczar Zone - In Action</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -29,16 +29,14 @@
             position: relative;
             overflow: hidden;
         }
-        .hero-slideshow {
+        .video-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-            animation: slideShow 20s infinite;
+            object-fit: cover;
+            opacity: 0.7;
         }
         .hero-content {
             position: relative;
@@ -59,56 +57,19 @@
             margin-top: 10px;
             animation: fadeInUp 1.5s ease-out forwards;
         }
-        nav {
-            display: flex;
-            justify-content: center;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.9);
-            position: fixed;
+            padding: 40px;
+        }
+        .gallery img {
             width: 100%;
-            top: 0;
-            z-index: 1000;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: transform 0.2s ease;
-        }
-        nav a:hover {
-            transform: scale(1.2);
-        }
-        .chatbot {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: url('https://source.unsplash.com/100x100/?robot,ai') no-repeat center/cover;
-            cursor: pointer;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-            transition: transform 0.3s ease-in-out;
-        }
-        .chatbot:hover {
-            transform: scale(1.1);
-        }
-        @keyframes slideShow {
-            0%, 100% { background-image: url('https://source.unsplash.com/3840x2160/?motorcycle,speed'); }
-            25% { background-image: url('https://source.unsplash.com/3840x2160/?bike,road'); }
-            50% { background-image: url('https://source.unsplash.com/3840x2160/?racing,adventure'); }
-            75% { background-image: url('https://source.unsplash.com/3840x2160/?speed,action'); }
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .gallery img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -119,17 +80,19 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="hero">
-        <div class="hero-slideshow"></div>
+        <video autoplay muted loop class="video-background">
+            <source src="/mnt/data/A_high-resolution_8K_animation_of_a_BMW_S1000RR_mo.png" type="video/mp4">
+        </video>
         <div class="hero-content">
-            <h1>Welcome to Roadczar Zone</h1>
-            <p>Fuel your soul with speed, ink, and unchained power.</p>
+            <h1>Roadczar In Action</h1>
+            <p>Experience the thrill, the speed, and the power.</p>
         </div>
     </div>
-    <div class="chatbot" onclick="openChat()"></div>
-    <script>
-        function openChat() {
-            alert('Chatbot feature coming soon! Stay tuned.');
-        }
-    </script>
+    <section class="gallery">
+        <img src="/mnt/data/A_high-resolution_8K_animation_of_a_BMW_S1000RR_mo.png" alt="Cyberpunk Wheelie Action">
+        <img src="https://source.unsplash.com/600x400/?motorcycle,stunt" alt="Stunt Performance">
+        <img src="https://source.unsplash.com/600x400/?motorcycle,roadtrip" alt="Adventure Ride">
+        <img src="https://source.unsplash.com/600x400/?motorcycle,night" alt="Night Ride">
+    </section>
 </body>
 </html>
