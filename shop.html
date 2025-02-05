@@ -3,20 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - CruiseMuze</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Roadczar Zone - Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background: #1a1a1a; color: white; text-align: center; }
-        h1 { font-size: 2.5em; margin-top: 50px; }
-        .shop-item { margin: 20px auto; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; max-width: 400px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+        }
+        body {
+            background: #000;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .shop-container {
+            padding: 50px;
+        }
+        .product {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product h3 {
+            margin-top: 10px;
+        }
+        .product p {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+        .btn-buy {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background: #ff0000;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .btn-buy:hover {
+            background: #cc0000;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Shop</h1>
-    <div class="shop-item">
-        <h2>Coming Soon!</h2>
-        <p>Our online store is under construction. Stay tuned!</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="vision.html">Vision</a>
+        <a href="inaction.html">In Action</a>
+        <a href="shop.html">Shop</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="shop-container">
+        <h1>Roadczar Zone Shop 🏍️🔥</h1>
+        <p>Premium motorcycle gear, accessories, and limited editions.</p>
+        <div class="grid">
+            <div class="product">
+                <img src="https://source.unsplash.com/600x400/?keychain,motorcycle" alt="Keychain">
+                <h3>Roadczar Keychain</h3>
+                <p>$12.99</p>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/600x400/?bike,sticker" alt="Stickers">
+                <h3>Bike Stickers</h3>
+                <p>$8.99</p>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/600x400/?hoodie,clothing" alt="Hoodie">
+                <h3>Roadczar Hoodie</h3>
+                <p>$49.99</p>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/600x400/?jacket,motorcycle" alt="Jacket">
+                <h3>Riding Jacket</h3>
+                <p>$119.99</p>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/600x400/?gloves,motorcycle" alt="Gloves">
+                <h3>Limited Edition Gloves</h3>
+                <p>$39.99</p>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+        </div>
     </div>
-    <a href="index.html" style="color: white;">← Back to Home</a>
 </body>
 </html>
