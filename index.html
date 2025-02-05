@@ -3,78 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - YourWebsite</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Roadczar Zone - The Art of Speed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+        }
+        body {
+            background: #000;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('https://source.unsplash.com/1600x900/?motorcycle,speed,tattoo') no-repeat center center/cover;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 4em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 14px 28px;
+            font-size: 1.4em;
+            background: #ff0000;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: #cc0000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+        nav a:hover {
+            transform: scale(1.2);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">YourBrand</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to YourBrand</h1>
-            <p>Innovating the future, one step at a time.</p>
-            <a href="#services" class="btn-primary">Explore Services</a>
-        </div>
-    </section>
-    
-    <section class="features">
-        <h2>Why Choose Us?</h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h3>Quality Assurance</h3>
-                <p>We prioritize excellence in every product we deliver.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Expert Team</h3>
-                <p>Our professionals bring years of experience to the table.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Customer-Centric</h3>
-                <p>We value our clients and focus on long-term relationships.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="dynamic-content" id="services">
-        <h2>Our Services</h2>
-        <div class="service-grid" id="service-container">
-            <!-- Services dynamically loaded here -->
-        </div>
-    </section>
-    
-    <section class="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial">
-                <p>"Absolutely outstanding service! Highly recommend."</p>
-                <span>- John Doe</span>
-            </div>
-            <div class="testimonial">
-                <p>"The best decision we made for our business growth."</p>
-                <span>- Jane Smith</span>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 YourBrand. All rights reserved.</p>
-            <ul class="footer-links">
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Service</a></li>
-            </ul>
-        </div>
-    </footer>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="vision.html">Vision</a>
+        <a href="inaction.html">In Action</a>
+        <a href="shop.html">Shop</a>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to Roadczar Zone 🏍️💀</h1>
+        <p>Fuel your soul with speed, ink, and unchained power.</p>
+        <a href="vision.html" class="btn">Dive In</a>
+    </div>
 </body>
 </html>
