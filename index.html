@@ -26,7 +26,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('https://source.unsplash.com/1600x900/?motorcycle,speed,tattoo') no-repeat center center/cover;
+            background: url('https://source.unsplash.com/1600x900/?motorcycle,speed') no-repeat center center/cover;
             backdrop-filter: blur(5px);
             padding: 20px;
             animation: fadeIn 1.5s ease-in-out;
@@ -83,8 +83,15 @@
         nav a:hover {
             transform: scale(1.2);
         }
-        .nav-visible {
-            opacity: 1 !important;
+        .contact {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+        .contact a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
         }
         @keyframes fadeInUp {
             from {
@@ -105,13 +112,6 @@
             }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(() => {
-                document.querySelector("nav").classList.add("nav-visible");
-            }, 300);
-        });
-    </script>
 </head>
 <body>
     <nav>
@@ -119,16 +119,19 @@
         <a href="vision.html">Vision</a>
         <a href="inaction.html">In Action</a>
         <a href="shop.html">Shop</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
     </nav>
     <div class="hero">
-        <h1>Welcome to Roadczar Zone 🏍️💀</h1>
-        <p>Fuel your soul with speed, ink, and unchained power.</p>
+        <h1>Welcome to Roadczar Zone</h1>
+        <p>Fuel your soul with speed, passion, and performance.</p>
         <a href="vision.html" class="btn">Explore Vision</a>
         <a href="inaction.html" class="btn">See In Action</a>
         <a href="shop.html" class="btn">Visit Shop</a>
+        <div class="contact">
+            Connect with me: 
+            <a href="https://instagram.com/cruisemuze" target="_blank">Instagram</a> | 
+            <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube</a>
+        </div>
     </div>
 </body>
 </html>
