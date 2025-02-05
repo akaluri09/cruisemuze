@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision - Roadczar Zone</title>
+    <title>Roadczar Vision - The Future of Speed</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <style>
         * {
             margin: 0;
@@ -18,72 +20,79 @@
             text-align: center;
             overflow-x: hidden;
         }
-        .hero {
-            height: 100vh;
+        .scroll-container {
             display: flex;
             flex-direction: column;
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
             justify-content: center;
             align-items: center;
-            background: url('https://source.unsplash.com/1600x900/?motorcycle,speed,adventure') no-repeat center center/cover;
-            backdrop-filter: blur(5px);
+            scroll-snap-align: start;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transition: opacity 0.8s ease-in-out;
+        }
+        .section:nth-child(1) { background: url('https://source.unsplash.com/1600x900/?motorcycle,future') no-repeat center center/cover; }
+        .section:nth-child(2) { background: url('https://source.unsplash.com/1600x900/?racing,adventure') no-repeat center center/cover; }
+        .section:nth-child(3) { background: url('https://source.unsplash.com/1600x900/?speed,road') no-repeat center center/cover; }
+        
+        h1, p {
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        h1 {
-            font-size: 4em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-        p {
-            font-size: 1.5em;
-            margin-top: 10px;
-            max-width: 800px;
-            opacity: 0;
-            animation: fadeInUp 1.5s ease-out forwards;
-        }
-        .btn {
-            margin-top: 20px;
-            padding: 14px 28px;
-            font-size: 1.4em;
-            background: #ff0000;
-            color: white;
             border-radius: 8px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
             text-decoration: none;
-            transition: transform 0.3s ease, background 0.3s ease;
+            font-size: 1.2em;
+            transition: transform 0.2s ease;
         }
-        .btn:hover {
-            transform: scale(1.1);
-            background: #cc0000;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        nav a:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>Vision: Unleash Your Inner Roadczar 🏍🔥</h1>
-        <p>Power, speed, and the unbreakable spirit of adventure. The road is yours to conquer. Dare to dream, dare to ride, dare to live. Your vision fuels your journey, and the horizon is just the beginning.</p>
-        <a href="index.html" class="btn">Back to Home</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="vision.html">Vision</a>
+        <a href="inaction.html">In Action</a>
+        <a href="shop.html">Shop</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <div class="scroll-container">
+        <section class="section">
+            <h1>Vision of Speed</h1>
+            <p>The future of riding is here. Ride fast, ride free.</p>
+        </section>
+        <section class="section">
+            <h1>Unleashing Power</h1>
+            <p>We believe in the raw power of performance and precision.</p>
+        </section>
+        <section class="section">
+            <h1>Beyond Limits</h1>
+            <p>Embrace the thrill. Break boundaries. Define your legacy.</p>
+        </section>
     </div>
 </body>
 </html>
