@@ -3,56 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CruiseMuze | Art & Creativity</title>
+    <title>CruiseMuze - Modern Apple-Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #1e1e2f, #3a3a5a);
-            color: white;
-            text-align: center;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
-        header {
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
+        body {
+            background: #121212;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
+            padding: 20px;
         }
         h1 {
             font-size: 3em;
-            margin: 20px 0;
+            font-weight: 700;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
         }
         p {
             font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
         }
         .btn {
-            background: #ff9900;
-            color: white;
+            margin-top: 20px;
             padding: 12px 24px;
             font-size: 1.2em;
-            text-decoration: none;
+            background: white;
+            color: black;
             border-radius: 8px;
-            display: inline-block;
-            margin-top: 20px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
         }
         .btn:hover {
-            background: #cc7a00;
+            transform: scale(1.1);
+            background: #e0e0e0;
         }
-        footer {
-            margin-top: 50px;
-            font-size: 0.8em;
-            opacity: 0.7;
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <header>
+    <div class="hero">
         <h1>Welcome to CruiseMuze 🎨</h1>
-        <p>Explore a world of creativity, art, and inspiration.</p>
-        <a href="#" class="btn">Discover More</a>
-    </header>
-    <footer>
-        <p>&copy; 2025 CruiseMuze. All Rights Reserved.</p>
-    </footer>
+        <p>Experience the art of modern design with smooth animations.</p>
+        <a href="#section1" class="btn">Explore More</a>
+    </div>
+    <div class="section" id="section1" style="background:#1a1a1a;">Smooth Scrolling & Modern Aesthetics</div>
+    <div class="section" id="section2" style="background:#222;">Minimalist, Clean & Elegant</div>
+    <script>
+        document.querySelectorAll('.section').forEach((section, index) => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = `fadeIn 1s ease-out forwards`;
+                    }
+                });
+            }, { threshold: 0.2 });
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
