@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roadczar Zone - The Art of Speed</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Oswald', sans-serif;
         }
         body {
             background: #000;
@@ -24,7 +24,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('https://source.unsplash.com/1600x900/?motorcycle,speed') no-repeat center center/cover;
+            background: url('https://source.unsplash.com/1600x900/?motorcycle,speed,tattoo') no-repeat center center/cover;
             backdrop-filter: blur(5px);
             padding: 20px;
             animation: fadeIn 1.5s ease-in-out;
@@ -72,6 +72,11 @@
             color: white;
             text-decoration: none;
             font-size: 1.2em;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+        nav a:hover {
+            transform: scale(1.2);
         }
         @keyframes fadeInUp {
             from {
@@ -96,14 +101,14 @@
 <body>
     <nav>
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="vlog.html">Vlog</a>
+        <a href="vision.html">Vision</a>
+        <a href="inaction.html">In Action</a>
         <a href="shop.html">Shop</a>
     </nav>
     <div class="hero">
-        <h1>Welcome to Roadczar Zone 🏍️</h1>
-        <p>Unleash the thrill of speed, the art of ink, and the beauty of raw horsepower.</p>
-        <a href="blog.html" class="btn">Dive In</a>
+        <h1>Welcome to Roadczar Zone 🏍️💀</h1>
+        <p>Fuel your soul with speed, ink, and unchained power.</p>
+        <a href="vision.html" class="btn">Dive In</a>
     </div>
 </body>
 </html>
