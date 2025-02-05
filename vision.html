@@ -3,21 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - CruiseMuze</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Vision - Roadczar Zone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #1a1a1a; color: white; text-align: center; }
-        h1 { font-size: 2.5em; margin-top: 50px; }
-        p { font-size: 1.2em; max-width: 600px; margin: auto; }
-        .post { margin: 20px auto; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; max-width: 600px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+        }
+        body {
+            background: #000;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('https://source.unsplash.com/1600x900/?motorcycle,speed,adventure') no-repeat center center/cover;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 4em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            max-width: 800px;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 14px 28px;
+            font-size: 1.4em;
+            background: #ff0000;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: #cc0000;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Blog</h1>
-    <div class="post">
-        <h2>First Blog Post</h2>
-        <p>Welcome to the CruiseMuze blog! Stay tuned for exciting content.</p>
+    <div class="hero">
+        <h1>Vision: Unleash Your Inner Roadczar 🏍🔥</h1>
+        <p>Power, speed, and the unbreakable spirit of adventure. The road is yours to conquer. Dare to dream, dare to ride, dare to live. Your vision fuels your journey, and the horizon is just the beginning.</p>
+        <a href="index.html" class="btn">Back to Home</a>
     </div>
-    <a href="index.html" style="color: white;">← Back to Home</a>
 </body>
 </html>
