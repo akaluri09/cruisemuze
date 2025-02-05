@@ -26,24 +26,36 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('https://source.unsplash.com/1600x900/?motorcycle,speed,tattoo') no-repeat center center/cover;
-            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: slideShow 20s infinite;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.5);
             padding: 20px;
-            animation: fadeIn 1.5s ease-in-out;
+            border-radius: 8px;
         }
         h1 {
             font-size: 4em;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 3px;
-            opacity: 0;
-            transform: translateY(20px);
             animation: fadeInUp 1s ease-out forwards;
         }
         p {
             font-size: 1.5em;
             margin-top: 10px;
-            opacity: 0;
             animation: fadeInUp 1.5s ease-out forwards;
         }
         .btn {
@@ -65,20 +77,26 @@
             justify-content: center;
             gap: 20px;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             position: fixed;
             width: 100%;
             top: 0;
+            z-index: 1000;
         }
         nav a {
             color: white;
             text-decoration: none;
             font-size: 1.2em;
-            position: relative;
             transition: transform 0.2s ease;
         }
         nav a:hover {
             transform: scale(1.2);
+        }
+        @keyframes slideShow {
+            0%, 100% { background-image: url('https://source.unsplash.com/3840x2160/?motorcycle,speed'); }
+            25% { background-image: url('https://source.unsplash.com/3840x2160/?bike,road'); }
+            50% { background-image: url('https://source.unsplash.com/3840x2160/?racing,adventure'); }
+            75% { background-image: url('https://source.unsplash.com/3840x2160/?speed,action'); }
         }
         @keyframes fadeInUp {
             from {
@@ -88,14 +106,6 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
             }
         }
     </style>
@@ -111,9 +121,14 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="hero">
-        <h1>Welcome to Roadczar Zone 🏍️💀</h1>
-        <p>Fuel your soul with speed, ink, and unchained power.</p>
-        <a href="vision.html" class="btn">Dive In</a>
+        <div class="hero-slideshow"></div>
+        <div class="hero-content">
+            <h1>Welcome to Roadczar Zone 🏍️💀</h1>
+            <p>Fuel your soul with speed, ink, and unchained power.</p>
+            <a href="vision.html" class="btn">Explore Vision</a>
+            <a href="inaction.html" class="btn">See In Action</a>
+            <a href="shop.html" class="btn">Visit Shop</a>
+        </div>
     </div>
 </body>
 </html>
