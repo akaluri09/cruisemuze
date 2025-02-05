@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadczar Zone - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+        }
+        body {
+            background: #000;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .contact-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('https://source.unsplash.com/1600x900/?motorcycle,road') no-repeat center center/cover;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 4em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+        .contact-info a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 14px 28px;
+            font-size: 1.4em;
+            background: #ff0000;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: #cc0000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: transform 0.2s ease;
+        }
+        nav a:hover {
+            transform: scale(1.2);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="vision.html">Vision</a>
+        <a href="inaction.html">In Action</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>Let's connect and ride the journey together.</p>
+        <div class="contact-info">
+            <a href="https://instagram.com/cruisemuze" target="_blank">Instagram: @cruisemuze</a>
+            <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube: @cruisemuze</a>
+            <a href="mailto:contact@roadczar.com">Email: contact@roadczar.com</a>
+        </div>
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>
