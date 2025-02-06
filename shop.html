@@ -15,7 +15,7 @@
             font-family: 'Oswald', sans-serif;
         }
         body {
-            background: #000;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: white;
             text-align: center;
             overflow-x: hidden;
@@ -24,8 +24,8 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.9);
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.85);
             position: fixed;
             width: 100%;
             top: 0;
@@ -44,27 +44,48 @@
             transform: scale(1.1);
         }
         .shop-container {
-            padding: 80px 20px 50px;
+            padding: 100px 20px 50px;
             text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 15px #00ffcc;
+        }
+        p {
+            font-size: 1.2em;
+            color: #cccccc;
+        }
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
         }
         .product {
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 12px;
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease-in-out;
-            box-shadow: 0 0 10px #00ffcc;
+            box-shadow: 0 0 15px #00ffcc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .product:hover {
             transform: scale(1.05);
         }
         .product img {
-            width: 80%;
+            width: 200px;
             height: auto;
             border-radius: 10px;
+            margin-bottom: 10px;
         }
         .product h3 {
-            margin-top: 10px;
+            font-size: 1.5em;
+            color: #00ffcc;
         }
         .product p {
             font-size: 1.2em;
@@ -80,12 +101,22 @@
             border-radius: 8px;
             text-decoration: none;
             cursor: not-allowed;
+            box-shadow: 0 0 10px #ff0000;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            background: #ff0000;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: #cc0000;
         }
     </style>
 </head>
