@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roadczar Zone - In Action</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -15,84 +15,115 @@
             font-family: 'Oswald', sans-serif;
         }
         body {
-            background: #000;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
             color: white;
             text-align: center;
             overflow-x: hidden;
         }
-        .hero {
-            height: 100vh;
+        nav {
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
+            gap: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.7;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 0 10px #ff0000;
         }
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 8px;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        nav a:hover {
+            background: #ff0000;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #ff0000;
+        }
+        .action-container {
+            max-width: 900px;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.85);
+            box-shadow: 0 0 25px #ff0000;
+            border-radius: 15px;
+            border: 3px solid #ff0000;
+            text-align: center;
+            margin: 120px auto 50px;
+            animation: fadeIn 1.5s ease-in-out;
         }
         h1 {
-            font-size: 4em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            animation: fadeInUp 1s ease-out forwards;
+            font-size: 3.5em;
+            color: #ff0000;
+            text-shadow: 0 0 20px #ff0000;
+            margin-bottom: 20px;
         }
         p {
-            font-size: 1.5em;
-            margin-top: 10px;
-            animation: fadeInUp 1.5s ease-out forwards;
+            font-size: 1.4em;
+            color: #ffffff;
+            text-shadow: 0 0 10px #ff0000;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px;
+        .video-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .gallery img {
+        iframe {
             width: 100%;
+            max-width: 800px;
+            height: 450px;
             border-radius: 10px;
-            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px #ff0000;
         }
-        .gallery img:hover {
-            transform: scale(1.05);
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            background: #ff0000;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 0 10px #ff0000;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            background: #cc0000;
+            box-shadow: 0 0 15px #cc0000;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a>
+        <a href="vision.html">Vision</a>
+        <a href="inaction.html">In Action</a>
         <a href="shop.html">Shop</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <div class="hero">
-        <video autoplay muted loop class="video-background">
-            <source src="/mnt/data/A_high-resolution_8K_animation_of_a_BMW_S1000RR_mo.png" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <h1>Roadczar In Action</h1>
-            <p>Experience the thrill, the speed, and the power.</p>
+    <div class="action-container">
+        <h1>In Action</h1>
+        <p>Experience the thrill, the speed, and the adrenaline. Watch Roadczar in action.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
-    <section class="gallery">
-        <img src="/mnt/data/A_high-resolution_8K_animation_of_a_BMW_S1000RR_mo.png" alt="Cyberpunk Wheelie Action">
-        <img src="https://source.unsplash.com/600x400/?motorcycle,stunt" alt="Stunt Performance">
-        <img src="https://source.unsplash.com/600x400/?motorcycle,roadtrip" alt="Adventure Ride">
-        <img src="https://source.unsplash.com/600x400/?motorcycle,night" alt="Night Ride">
-    </section>
+    <a href="index.html" class="btn">Back to Home</a>
 </body>
 </html>
