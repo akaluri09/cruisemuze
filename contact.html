@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roadczar Zone - Contact</title>
+    <title>Roadczar Zone - Get in Touch</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -55,6 +55,11 @@
             display: block;
             margin-top: 10px;
         }
+        .help-number {
+            font-size: 1em;
+            color: #ffffff;
+            margin-top: 5px;
+        }
         .contact-form {
             margin-top: 20px;
             background: rgba(0, 0, 0, 0.8);
@@ -63,7 +68,7 @@
             box-shadow: 0 0 10px #00ffcc;
             width: 60%;
         }
-        .contact-form input, .contact-form textarea {
+        .contact-form textarea {
             width: 100%;
             padding: 10px;
             margin-top: 10px;
@@ -95,22 +100,20 @@
         <a href="vision.html">Vision</a>
         <a href="inaction.html">In Action</a>
         <a href="shop.html">Shop</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Get in Touch</a>
     </nav>
     <div class="contact-container">
-        <h1>Contact Me</h1>
+        <h1>Get in Touch</h1>
         <p>Let's connect and ride the journey together.</p>
         <div class="contact-info">
             <a href="https://instagram.com/cruisemuze" target="_blank">Instagram: @cruisemuze</a>
             <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube: @cruisemuze</a>
             <a href="mailto:contact@roadczar.com">Email: contact@roadczar.com</a>
-            <p>Help Number: <strong>669-777-6221</strong></p>
+            <p class="help-number">Help Number: <strong>669-777-6221</strong></p>
         </div>
         <div class="contact-form">
             <h2>Send me a message</h2>
             <form action="send-message.php" method="POST" enctype="multipart/form-data">
-                <input type="text" name="name" placeholder="Your Name (Optional)">
-                <input type="email" name="email" placeholder="Your Email (Optional)">
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                 <input type="file" name="attachment">
                 <button type="submit">Send Message</button>
