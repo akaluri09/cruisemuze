@@ -32,20 +32,20 @@
             animation: fadeIn 1.5s ease-in-out;
         }
         h1 {
-            font-size: 4em;
+            font-size: 3.5em;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 3px;
             animation: fadeInUp 1s ease-out forwards;
         }
         p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin-top: 10px;
             animation: fadeInUp 1.5s ease-out forwards;
         }
         .contact-info {
             margin-top: 20px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #ffffff;
         }
         .contact-info a {
@@ -56,30 +56,39 @@
             margin-top: 10px;
         }
         .help-number {
-            font-size: 1em;
+            font-size: 0.9em;
             color: #ffffff;
             margin-top: 5px;
         }
         .contact-form {
             margin-top: 20px;
             background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px #00ffcc;
-            width: 60%;
+            width: 50%;
+            max-width: 400px;
         }
         .contact-form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
             margin-top: 10px;
             border: none;
             border-radius: 5px;
-            font-size: 1.2em;
+            font-size: 1em;
+            resize: none;
+            height: 80px;
+        }
+        .auto-suggestions {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-top: 5px;
+            text-align: left;
         }
         .contact-form button {
-            margin-top: 15px;
-            padding: 14px 28px;
-            font-size: 1.4em;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
             background: #ff0000;
             color: white;
             border-radius: 8px;
@@ -89,7 +98,7 @@
             transition: transform 0.3s ease, background 0.3s ease;
         }
         .contact-form button:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             background: #cc0000;
         }
     </style>
@@ -113,11 +122,10 @@
         </div>
         <div class="contact-form">
             <h2>Send me a message</h2>
-            <form action="send-message.php" method="POST" enctype="multipart/form-data">
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <input type="file" name="attachment">
-                <button type="submit">Send Message</button>
-            </form>
+            <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
+            <div class="auto-suggestions">Suggested topics: Feedback, Collaboration, Ride Meetups</div>
+            <input type="file" name="attachment">
+            <button type="submit">Send Message</button>
         </div>
         <a href="index.html" class="btn">Back to Home</a>
     </div>
