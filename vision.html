@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Vision</title>
+    <title>Roadczar Zone - Vision</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-        body {
-            font-family: 'Orbitron', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-            color: #00ffcc;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
             text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
+            overflow-x: hidden;
         }
         nav {
             display: flex;
             justify-content: center;
             gap: 20px;
             padding: 15px;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.9);
             position: fixed;
             width: 100%;
             top: 0;
@@ -45,16 +45,15 @@
             transform: scale(1.1);
             box-shadow: 0 0 10px #ff0000;
         }
-        .container {
+        .vision-container {
             max-width: 900px;
-            padding: 40px;
+            padding: 50px;
             background: rgba(0, 0, 0, 0.85);
             box-shadow: 0 0 25px #00ffcc;
             border-radius: 15px;
             border: 3px solid #00ffcc;
             text-align: center;
-            position: relative;
-            margin-top: 100px;
+            margin: 120px auto 50px;
             animation: fadeIn 1.5s ease-in-out;
         }
         h1 {
@@ -105,13 +104,13 @@
         <a href="shop.html">Shop</a>
         <a href="contact.html">Get in Touch</a>
     </nav>
-    <div class="container">
+    <div class="vision-container">
         <h1>Our Vision</h1>
         <p>
-            At Roadczar, our vision is to create a platform where innovation, excellence, and community come together. 
-            We strive to connect like-minded individuals, offer high-quality products and services, and drive progress 
-            through cutting-edge technology and expertise. Our goal is to build a future where passion meets purpose, 
-            ensuring a seamless and impactful experience for all.
+            Roadczars is more than just a name—it’s a movement, a fusion of speed, precision, and the art of connection. 
+            Our vision is to create a space where innovation meets passion, where every rider, every enthusiast, and every 
+            creator has a home. We’re here to push limits, build a community, and redefine what it means to ride with purpose. 
+            This is more than just a journey; it’s a revolution.
         </p>
     </div>
     <a href="index.html" class="btn">Back to Home</a>
