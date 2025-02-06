@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST["name"]);
     $email = htmlspecialchars($_POST["email"]);
     $message = htmlspecialchars($_POST["message"]);
-    $recipient = "contact@roadczar.com"; // Change this to your preferred email
+    $recipient = "akshitryde@gmail.com"; // Change this to your preferred email
     
     // Handle File Upload
     $file_attached = false;
