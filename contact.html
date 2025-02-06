@@ -20,6 +20,29 @@
             text-align: center;
             overflow-x: hidden;
         }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        nav a:hover {
+            background: #ff0000;
+            transform: scale(1.1);
+        }
         .contact-container {
             height: 100vh;
             display: flex;
@@ -77,7 +100,13 @@
             border-radius: 5px;
             font-size: 1em;
             resize: none;
-            height: 80px;
+            height: 60px;
+            transition: all 0.3s ease;
+        }
+        .contact-form textarea:focus {
+            height: 120px;
+            border: 2px solid #00ffcc;
+            outline: none;
         }
         .auto-suggestions {
             font-size: 0.9em;
@@ -117,7 +146,6 @@
         <div class="contact-info">
             <a href="https://instagram.com/cruisemuze" target="_blank">Instagram: @cruisemuze</a>
             <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube: @cruisemuze</a>
-            <a href="mailto:contact@roadczar.com">Email: contact@roadczar.com</a>
             <p class="help-number">Help Number: <strong>669-777-6221</strong></p>
         </div>
         <div class="contact-form">
