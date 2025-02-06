@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roadczar Zone - The Art of Speed</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -15,10 +15,35 @@
             font-family: 'Oswald', sans-serif;
         }
         body {
-            background: #000;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: white;
             text-align: center;
             overflow-x: hidden;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 0 10px #0071bc;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        nav a:hover {
+            background: #0071bc;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #0071bc;
         }
         .hero {
             height: 100vh;
@@ -36,52 +61,30 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 3px;
-            opacity: 1;
-            transform: translateY(0);
+            text-shadow: 0 0 20px #0071bc;
             animation: fadeInUp 1s ease-out forwards;
         }
         p {
             font-size: 1.5em;
             margin-top: 10px;
-            opacity: 1;
+            text-shadow: 0 0 10px #0071bc;
             animation: fadeInUp 1.5s ease-out forwards;
         }
         .btn {
             margin-top: 20px;
             padding: 14px 28px;
             font-size: 1.4em;
-            background: #ff0000;
+            background: #0071bc;
             color: white;
             border-radius: 8px;
             text-decoration: none;
             transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 0 10px #0071bc;
         }
         .btn:hover {
             transform: scale(1.1);
-            background: #cc0000;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.9);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            position: relative;
-            transition: transform 0.2s ease;
-        }
-        nav a:hover {
-            transform: scale(1.2);
+            background: #005f99;
+            box-shadow: 0 0 15px #005f99;
         }
         .contact {
             margin-top: 20px;
