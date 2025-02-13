@@ -52,7 +52,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 160px 20px 20px;
+    padding: 200px 20px 20px;
     background: url('https://source.unsplash.com/1600x900/?motorcycle,speed') no-repeat center center/cover;
     backdrop-filter: blur(5px);
     animation: fadeIn 1.5s ease-in-out;
@@ -123,12 +123,12 @@ p {
 
 .tribal-left {
     left: 0;
-    background-image: url('assets/tribal-left.jpg');
+    background-image: url('assets/tribal_left_half.jpg');
 }
 
 .tribal-right {
     right: 0;
-    background-image: url('assets/tribal-right.jpg');
+    background-image: url('assets/tribal_right_half.jpg');
 }
 
 @keyframes fadeInUp {
