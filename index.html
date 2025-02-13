@@ -13,6 +13,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Oswald', sans-serif;
+            scroll-behavior: smooth; /* 🔹 Makes scrolling smooth, iOS-style */
         }
         body {
             background: linear-gradient(135deg, #000000, #1a1a1a);
@@ -51,9 +52,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 140px 20px 20px; /* 🔹 Increased padding to avoid overlap with nav */
             background: url('https://source.unsplash.com/1600x900/?motorcycle,speed') no-repeat center center/cover;
             backdrop-filter: blur(5px);
-            padding: 20px;
             animation: fadeIn 1.5s ease-in-out;
         }
         h1 {
@@ -70,12 +71,27 @@
             text-shadow: 0 0 10px #ff0000;
             animation: fadeInUp 1.5s ease-out forwards;
         }
+        .contact {
+            margin-top: 40px; /* 🔹 Moves it up, now between welcome text & Insta slider */
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+        .contact a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
         .instagram-slider {
             margin-top: 30px;
             width: 100%;
             max-width: 666px;
             height: 222px;
             overflow: hidden;
+            min-height: 222px; /* 🔹 Ensures it never disappears */
         }
         .footer {
             margin-top: 50px;
@@ -84,38 +100,6 @@
             color: white;
             text-align: center;
         }
-        .footer a {
-            color: #00ffcc;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 10px;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* ✅ Tribal Tattoo Aesthetic Borders */
-        .border-left, .border-right {
-            position: fixed;
-            top: 0;
-            height: 100%;
-            width: 80px; /* Adjust width as needed */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.6;
-            mix-blend-mode: lighten;
-            z-index: 999;
-        }
-        .border-left {
-            left: 0;
-            background-image: url('tribal-left.png'); /* Replace with actual tribal tattoo PNG */
-        }
-        .border-right {
-            right: 0;
-            background-image: url('tribal-right.png'); /* Replace with actual tribal tattoo PNG */
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -137,9 +121,6 @@
     </style>
 </head>
 <body>
-    <!-- Tribal Tattoo Borders -->
-    <div class="border-left"></div>
-    <div class="border-right"></div>
 
     <nav>
         <a href="index.html">Home</a>
@@ -152,20 +133,28 @@
     <div class="hero">
         <h1>Welcome to Roadczar Zone</h1>
         <p>Fuel your soul with speed, passion, and performance.</p>
-        
-        <!-- ✅ Instagram Slider -->
+
+        <!-- ✅ Connect With Me Moved Higher -->
+        <div class="contact">
+            Connect with me: 
+            <a href="https://instagram.com/cruisemuze" target="_blank">Instagram</a> | 
+            <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube</a>
+        </div>
+
+        <!-- ✅ Instagram Slider (With Fixes for Disappearance) -->
         <div class="instagram-slider">
-            <iframe src="https://snapwidget.com/embed/1088384" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" 
-                style="border:none; overflow:hidden; width:666px; height:222px;" title="Instagram Feed">
+            <iframe src="https://snapwidget.com/embed/1088384" class="snapwidget-widget" allowtransparency="true" 
+                allow="encrypted-media" frameborder="0" scrolling="no" 
+                style="border:none; overflow:hidden; width:666px; height:222px; display:block !important; visibility:visible !important;" 
+                title="Instagram Feed">
             </iframe>
         </div>
     </div>
 
-    <!-- ✅ Moved Connect With Me to Footer -->
+    <!-- ✅ Footer (Kept for Future Additions) -->
     <div class="footer">
-        <p>Connect with me:</p>
-        <a href="https://instagram.com/cruisemuze" target="_blank">Instagram</a> | 
-        <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube</a>
+        <p>&copy; 2025 Roadczar Zone. All rights reserved.</p>
     </div>
+
 </body>
 </html>
