@@ -70,37 +70,28 @@
             text-shadow: 0 0 10px #ff0000;
             animation: fadeInUp 1.5s ease-out forwards;
         }
-        .btn {
-            margin-top: 20px;
-            padding: 14px 28px;
-            font-size: 1.4em;
-            background: #ff0000;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: transform 0.3s ease, background 0.3s ease;
-            box-shadow: 0 0 10px #ff0000;
-        }
-        .btn:hover {
-            transform: scale(1.1);
-            background: #cc0000;
-            box-shadow: 0 0 15px #cc0000;
-        }
-        .contact {
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: #ffffff;
-        }
-        .contact a {
-            color: #00ffcc;
-            text-decoration: none;
-            font-weight: bold;
-        }
         .instagram-slider {
             margin-top: 30px;
             width: 100%;
-            max-width: 960px;
+            max-width: 666px;
+            height: 222px;
             overflow: hidden;
+        }
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+        }
+        .footer a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
         }
         @keyframes fadeInUp {
             from {
@@ -134,23 +125,20 @@
     <div class="hero">
         <h1>Welcome to Roadczar Zone</h1>
         <p>Fuel your soul with speed, passion, and performance.</p>
-        <a href="vision.html" class="btn">Explore Vision</a>
-        <a href="inaction.html" class="btn">See In Action</a>
-        <a href="shop.html" class="btn">Visit Shop</a>
         
-        <!-- Instagram Contact Links -->
-        <div class="contact">
-            Connect with me: 
-            <a href="https://instagram.com/cruisemuze" target="_blank">Instagram</a> | 
-            <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube</a>
-        </div>
-
         <!-- ✅ Instagram Slider Added Below -->
         <div class="instagram-slider">
             <iframe src="https://snapwidget.com/embed/1088384" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" 
                 style="border:none; overflow:hidden; width:666px; height:222px;" title="Instagram Feed">
             </iframe>
         </div>
+    </div>
+
+    <!-- ✅ Moved Connect With Me to Footer -->
+    <div class="footer">
+        <p>Connect with me:</p>
+        <a href="https://instagram.com/cruisemuze" target="_blank">Instagram</a> | 
+        <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube</a>
     </div>
 </body>
 </html>
