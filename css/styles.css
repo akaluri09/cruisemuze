@@ -123,12 +123,12 @@ p {
 
 .tribal-left {
     left: 0;
-    background-image: url('assets/tribal_left_half.jpg');
+    background-image: url('/assets/tribal_left_half.jpg');
 }
 
 .tribal-right {
     right: 0;
-    background-image: url('assets/tribal_right_half.jpg');
+    background-image: url('/assets/tribal_right_half.jpg');
 }
 
 @keyframes fadeInUp {
