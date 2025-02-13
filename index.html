@@ -13,7 +13,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Oswald', sans-serif;
-            scroll-behavior: smooth; /* 🔹 Makes scrolling smooth, iOS-style */
+            scroll-behavior: smooth;
         }
         body {
             background: linear-gradient(135deg, #000000, #1a1a1a);
@@ -52,7 +52,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 140px 20px 20px; /* 🔹 Increased padding to avoid overlap with nav */
+            padding: 160px 20px 20px;
             background: url('https://source.unsplash.com/1600x900/?motorcycle,speed') no-repeat center center/cover;
             backdrop-filter: blur(5px);
             animation: fadeIn 1.5s ease-in-out;
@@ -72,7 +72,7 @@
             animation: fadeInUp 1.5s ease-out forwards;
         }
         .contact {
-            margin-top: 40px; /* 🔹 Moves it up, now between welcome text & Insta slider */
+            margin-top: 60px;
             font-size: 1.2em;
             color: #ffffff;
         }
@@ -86,12 +86,12 @@
             text-decoration: underline;
         }
         .instagram-slider {
-            margin-top: 30px;
+            margin-top: 50px;
             width: 100%;
             max-width: 666px;
             height: 222px;
             overflow: hidden;
-            min-height: 222px; /* 🔹 Ensures it never disappears */
+            min-height: 222px;
         }
         .footer {
             margin-top: 50px;
@@ -121,7 +121,6 @@
     </style>
 </head>
 <body>
-
     <nav>
         <a href="index.html">Home</a>
         <a href="vision.html">Vision</a>
@@ -134,14 +133,12 @@
         <h1>Welcome to Roadczar Zone</h1>
         <p>Fuel your soul with speed, passion, and performance.</p>
 
-        <!-- ✅ Connect With Me Moved Higher -->
         <div class="contact">
             Connect with me: 
             <a href="https://instagram.com/cruisemuze" target="_blank">Instagram</a> | 
             <a href="https://youtube.com/@cruisemuze" target="_blank">YouTube</a>
         </div>
 
-        <!-- ✅ Instagram Slider (With Fixes for Disappearance) -->
         <div class="instagram-slider">
             <iframe src="https://snapwidget.com/embed/1088384" class="snapwidget-widget" allowtransparency="true" 
                 allow="encrypted-media" frameborder="0" scrolling="no" 
@@ -151,10 +148,8 @@
         </div>
     </div>
 
-    <!-- ✅ Footer (Kept for Future Additions) -->
     <div class="footer">
         <p>&copy; 2025 Roadczar Zone. All rights reserved.</p>
     </div>
-
 </body>
 </html>
