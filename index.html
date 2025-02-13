@@ -44,12 +44,12 @@
     </div>
 
     <style>
-    /* Extend Tribal Tattoos and Remove Background */
+    /* Extend Tribal Tattoos and Adjust Position */
     .tribal-left, .tribal-right {
         position: fixed;
         top: 0;
-        height: 100%;
-        width: 180px;
+        height: 150%; /* Increased length by 1.5x */
+        width: 160px; /* Slightly narrower to move inwards */
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -58,12 +58,12 @@
     }
 
     .tribal-left {
-        left: 0;
+        left: 20px; /* Moved slightly inward */
         background-image: url('assets/tribal_left_half.png');
     }
 
     .tribal-right {
-        right: 0;
+        right: 20px; /* Moved slightly inward */
         background-image: url('assets/tribal_right_half.png');
     }
     </style>
