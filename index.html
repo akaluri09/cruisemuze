@@ -93,6 +93,29 @@
         .footer a:hover {
             text-decoration: underline;
         }
+
+        /* ✅ Tribal Tattoo Aesthetic Borders */
+        .border-left, .border-right {
+            position: fixed;
+            top: 0;
+            height: 100%;
+            width: 80px; /* Adjust width as needed */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            mix-blend-mode: lighten;
+            z-index: 999;
+        }
+        .border-left {
+            left: 0;
+            background-image: url('tribal-left.png'); /* Replace with actual tribal tattoo PNG */
+        }
+        .border-right {
+            right: 0;
+            background-image: url('tribal-right.png'); /* Replace with actual tribal tattoo PNG */
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -114,6 +137,10 @@
     </style>
 </head>
 <body>
+    <!-- Tribal Tattoo Borders -->
+    <div class="border-left"></div>
+    <div class="border-right"></div>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="vision.html">Vision</a>
@@ -126,7 +153,7 @@
         <h1>Welcome to Roadczar Zone</h1>
         <p>Fuel your soul with speed, passion, and performance.</p>
         
-        <!-- ✅ Instagram Slider Added Below -->
+        <!-- ✅ Instagram Slider -->
         <div class="instagram-slider">
             <iframe src="https://snapwidget.com/embed/1088384" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" 
                 style="border:none; overflow:hidden; width:666px; height:222px;" title="Instagram Feed">
