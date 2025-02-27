@@ -109,27 +109,7 @@ p {
 }
 
 /* Tribal Tattoo Borders */
-.tribal-left, .tribal-right {
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 140px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    z-index: 998;
-}
 
-.tribal-left {
-    left: 0;
-    background-image: url('assets/tribal-left.jpg');
-}
-
-.tribal-right {
-    right: 0;
-    background-image: url('assets/tribal-right.jpg');
-}
 
 @keyframes fadeInUp {
     from {
