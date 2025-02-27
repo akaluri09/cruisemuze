@@ -108,29 +108,7 @@ p {
     text-align: center;
 }
 
-/* Tribal Tattoo Borders */
-.tribal-left, .tribal-right {
-    position: fixed;
-    top: 0;
-    height: 100vh; /* Correct height to fit screen */
-    width: 160px; /* Slightly narrower to move inwards */
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 1;
-    z-index: 998;
-}
-
-.tribal-left {
-    left: 20px; /* Moved slightly inward */
-    background-image: url('assets/tribal_let_half.png');
-}
-
-.tribal-right {
-    right: 20px; /* Moved slightly inward */
-    background-image: url('assets/tribal_righ_half.png');
-}
-
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -149,4 +127,4 @@ p {
     to {
         opacity: 1;
     }
-} 
+}
