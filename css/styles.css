@@ -52,7 +52,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 160px 20px 20px;
+    padding: 200px 20px 20px;
     background: url('https://source.unsplash.com/1600x900/?motorcycle,speed') no-repeat center center/cover;
     backdrop-filter: blur(5px);
     animation: fadeIn 1.5s ease-in-out;
@@ -109,7 +109,27 @@ p {
 }
 
 /* Tribal Tattoo Borders */
+.tribal-left, .tribal-right {
+    position: fixed;
+    top: 0;
+    height: 100vh; /* Correct height to fit screen */
+    width: 160px; /* Slightly narrower to move inwards */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 998;
+}
 
+.tribal-left {
+    left: 20px; /* Moved slightly inward */
+    background-image: url('assets/tribal_let_half.png');
+}
+
+.tribal-right {
+    right: 20px; /* Moved slightly inward */
+    background-image: url('assets/tribal_righ_half.png');
+}
 
 @keyframes fadeInUp {
     from {
@@ -129,4 +149,4 @@ p {
     to {
         opacity: 1;
     }
-}
+} 
