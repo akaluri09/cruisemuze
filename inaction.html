@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-</head>    
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roadczar Zone - In Action</title>
@@ -11,18 +8,21 @@
     <script src="script.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Oswald', sans-serif;
         }
+
         body {
             background: linear-gradient(135deg, #000000, #1a1a1a);
             color: white;
             text-align: center;
             overflow-x: hidden;
         }
+
         nav {
             display: flex;
             justify-content: center;
@@ -35,6 +35,7 @@
             z-index: 1000;
             box-shadow: 0 0 10px #ff0000;
         }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -43,11 +44,13 @@
             border-radius: 5px;
             transition: background 0.3s ease, transform 0.2s ease;
         }
+
         nav a:hover {
             background: #ff0000;
             transform: scale(1.1);
             box-shadow: 0 0 10px #ff0000;
         }
+
         .action-container {
             max-width: 900px;
             padding: 50px;
@@ -59,12 +62,14 @@
             margin: 120px auto 50px;
             animation: fadeIn 1.5s ease-in-out;
         }
+
         h1 {
             font-size: 3.5em;
             color: #ff0000;
             text-shadow: 0 0 20px #ff0000;
             margin-bottom: 20px;
         }
+
         p {
             font-size: 1.4em;
             color: #ffffff;
@@ -72,12 +77,14 @@
             line-height: 1.8;
             animation: fadeInUp 1s ease-out;
         }
+
         .video-container {
             margin-top: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         iframe {
             width: 100%;
             max-width: 800px;
@@ -85,6 +92,7 @@
             border-radius: 10px;
             box-shadow: 0 0 15px #ff0000;
         }
+
         .btn {
             display: inline-block;
             margin-top: 30px;
@@ -97,15 +105,18 @@
             transition: transform 0.3s ease, background 0.3s ease;
             box-shadow: 0 0 10px #ff0000;
         }
+
         .btn:hover {
             transform: scale(1.1);
             background: #cc0000;
             box-shadow: 0 0 15px #cc0000;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -120,13 +131,21 @@
         <a href="shop.html">Shop</a>
         <a href="contact.html">Contact</a>
     </nav>
+
     <div class="action-container">
         <h1>In Action</h1>
         <p>Experience the thrill, the speed, and the adrenaline. Watch Roadczar in action.</p>
+        
         <div class="video-container">
-            <iframe src="https://www.youtube.com/watch?v=0cUms8lcDSI" frameborder="0" allowfullscreen></iframe>
+            <iframe 
+                src="https://www.youtube.com/embed/0cUms8lcDSI" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
+
     <a href="index.html" class="btn">Back to Home</a>
 </body>
 </html>
